@@ -1,0 +1,56 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "A starter kit for building PWAs!",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "vite --open",
+    "dev": "npm run dev-server",
+    "dev-task": "vite",
+    "deploy": "npx @azure/static-web-apps-cli login --no-use-keychain && npx @azure/static-web-apps-cli deploy",
+    "build": "tsc && vite build",
+    "start": "npm run dev",
+    "start-remote": "vite --host"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.15.0",
+    "@thepassle/app-tools": "^0.9.12",
+    "@vitejs/plugin-react": "^4.3.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "react-router-dom": "^6.23.1",
+    "lit": "^3.1.2",
+    "lucide-react": "^0.379.0",
+    "posthog-js": "^1.131.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "urlpattern-polyfill": "^10.0.0",
+    "workbox-build": "^7.0.0",
+    "workbox-core": "^7.0.0",
+    "workbox-precaching": "^7.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^15.0.7",
+    "@types/node": "^20.12.12",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
+    "vite-plugin-pwa": "^0.19.8"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "trailingComma": "es5",
+    "endOfLine": "crlf",
+    "bracketSpacing": true
+  }
+}
