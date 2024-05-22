@@ -29,6 +29,6 @@
           "vite/client"
       ]
   },
-  "include": ["src/**/*.ts", "router.d.ts"],
+  "include": ["src/**/*.ts", "router.d.ts", "test-setup.config.ts"],
   "exclude": ["node_modules"]
 }

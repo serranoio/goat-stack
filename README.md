@@ -1,3 +1,5 @@
+This is the goat stack.
+
 # PWA Starter
 
 [**Straight to Full Documentation**](https://docs.pwabuilder.com/#/starter/quick-start)
