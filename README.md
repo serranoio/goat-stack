@@ -1,37 +1,25 @@
-This is the goat stack.
+Welcome to the goat stack.
 
-# PWA Starter
+## Where the fun begins 
+- [React](https://react.dev/), [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), [React-testing-library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Shadcn](https://ui.shadcn.com/docs) + [Tailwindcss](https://tailwindcss.com/docs/installation)
+- [Supabase](https://supabase.com/)
+- [posthog](https://posthog.com/pricing)
+- PWA
+    - [Caching](https://developer.chrome.com/docs/workbox/caching-strategies-overview)
+    - [PWABuilder](https://www.pwabuilder.com/)
 
-[**Straight to Full Documentation**](https://docs.pwabuilder.com/#/starter/quick-start)
 
-The PWABuilder pwa-starter is our opinionated, best practices, production tested starter that we use to build all of our PWAs, including [PWABuilder itself](https://blog.pwabuilder.com/posts/introducing-the-brand-new-pwa-builder/)! The pwa-starter is a starter codebase, just like create-react-app or the Angular CLI can generate, that uses the PWABuilder team&#39;s preferred front-end tech stack. We also have a CLI tool to allow you to create a PWA template from the command line.
+## Requirements 
 
-## Jump Right In
+[Shadcn requires for you to use their CLI to install components](https://ui.shadcn.com/docs/installation/vite).
 
-Install the PWABuilder CLI:
+`npx shadcn-ui@latest add button`
 
-`npm i -g @pwabuilder/cli`
 
-And create a new app with this command:
+Add the PWABuilder Studio extension from VSCode. You will need it to verify your PWA configuration.
 
-`pwa create`
-
-And start your app locally with:
-
-`pwa start`
-
-And that's it! Good luck on your Progressive Web App adventure!
-
-## More Info
-
-[![Get started with the pwa-starter!](https://img.youtube.com/vi/u3pWKpmic_k/0.jpg)](https://www.youtube.com/watch?v=u3pWKpmic_k)
-
-With it you get an app that:
-- Has no build system to set up and no boilerplate code to add. Everything is included out of the box.
-- Has a Service Worker system using [Workbox](https://developers.google.com/web/tools/workbox/)
-- Scores close to 100 on Lighthouse out of the box
-- Has everything needed to be installable in the browser
-- Is ready to be package for the app stores using [PWABuilder](https://www.pwabuilder.com)
-- Uses the [Azure Static Web Apps CLI](https://azure.github.io/static-web-apps-cli) which enables emulating your production environment locally, and gets you ready for deploying to Azure Static Web Apps!
-
-and all with just a few button clicks 😊.
+## Needs
+* We need to implement a caching strategy
+* We need to include saddlebag
+* We need to research indexxedDB over Cache Storage

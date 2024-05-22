@@ -1,7 +1,7 @@
 {
   "id": "/",
   "scope": "/",
-  "name": "template",
+  "name": "goat template",
   "display": "standalone",
   "start_url": "/",
   "short_name": "starter",
