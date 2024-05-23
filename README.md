@@ -1,8 +1,15 @@
 Welcome to the goat stack.
 
 ## Where the fun begins 
-- [React](https://react.dev/), [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), [React-testing-library](https://testing-library.com/docs/react-testing-library/intro/)
-- [Shadcn](https://ui.shadcn.com/docs) + [Tailwindcss](https://tailwindcss.com/docs/installation)
+- [React](https://react.dev/)
+    - [Vite](https://vitejs.dev/)
+    - [Vitest](https://vitest.dev/)
+    - [React-testing-library](https://testing-library.com/docs/react-testing-library/intro/)
+        - [Course taken](https://members.codewithmosh.com/courses/complete-react-testing-course/lectures/52312452)
+    - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+    - [Shadcn](https://ui.shadcn.com/docs)
+        - [Theme Generator](https://themes.fkaya.dev/)
+    -  [Tailwindcss](https://tailwindcss.com/docs/installation)
 - [Supabase](https://supabase.com/)
 - [posthog](https://posthog.com/pricing)
 - PWA
@@ -20,8 +27,6 @@ Welcome to the goat stack.
 Add the PWABuilder Studio extension from VSCode. You will need it to verify your PWA configuration.
 
 ## Needs
-* We need to implement a caching strategy
-* We need to include saddlebag
 * We need to research indexxedDB over Cache Storage
 * Internationalization
 * Supabase needs investigation

@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "./App.css"
 import { Button } from "./components/ui/button"
 import { useQuery } from "react-query";
+import { useBoundStore, useStore } from "./Routes";
 
 // example of a custom hook
 const useRandomQuote = () => {
@@ -24,6 +25,19 @@ const useRandomQuote = () => {
 export default function App() {
     const {data: quote, isLoading, error, refetch} = useRandomQuote()
 
+    const quoteState = useStore((state: any) => state) 
+    const persistentQuoteState = useBoundStore((state: any) => state) 
+
+
+    console.log(persistentQuoteState)
+    useEffect(() => {
+        if (quote) {
+            quoteState.addQuote(quote.content)
+            persistentQuoteState.addQuote(quote.content)
+        }
+    }, [quote])
+
+
     const showQuote = () => {
         if (error) {
             return <div>Error in calling the endpoint</div>
@@ -37,8 +51,29 @@ export default function App() {
     }
 
     return <main>
-        <Button variant={"outline"} onClick={() => refetch()}>Fetch fun quote</Button>
+        <div className="justify-center flex gap-2">
+            <Button variant={"outline"} onClick={() => refetch()}>Fetch fun quote</Button>
+            <Button variant={"default"} onClick={() => {
+                persistentQuoteState.removeAllQuotes();
+                quoteState.removeAllQuotes();
+
+            }}>Remove all quotes</Button>
+        </div>
+        <div>
+            <h2 className="h2">Current Quote:</h2>
         {showQuote()}
+        </div>
+
+        <div>
+            <h3 className="h3">quotes</h3>
+        {quoteState.quotes.map((quote: string, key: number) => {
+            return <p className="py-2" key={key}>{quote}</p>
+        })}
+            <h3 className="h3">Persistent quotes</h3>
+        {persistentQuoteState.quotes.map((quote: string, key: number) => {
+            return <p className="py-2" key={key}>{quote}</p>
+        })}
+        </div>
         <h1 className="h1 text-center">
         App Template h1
         </h1> 
