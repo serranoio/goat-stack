@@ -15,6 +15,9 @@ Welcome to the goat stack.
 - PWA
     - [Caching](https://developer.chrome.com/docs/workbox/caching-strategies-overview)
     - [PWABuilder](https://www.pwabuilder.com/)
+    - [Workbox](https://developer.chrome.com/docs/workbox/modules/workbox-sw)
+        - Using their libraries, we can abstract away the route registration + the caching strategy
+
 
 
 ## Requirements 
@@ -27,11 +30,12 @@ Welcome to the goat stack.
 Add the PWABuilder Studio extension from VSCode. You will need it to verify your PWA configuration.
 
 ## Needs
-* We need to research indexxedDB over Cache Storage
 * Internationalization
 * Supabase needs investigation
     * To be added to the project
     * for Auth.
 
+## TO-DO
+* Finish react-testing-library course
 
-* For the end: See if you can publish it so it can be packaged 
+* For the end: See if you can deploy it to netlify so it can be packaged 
