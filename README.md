@@ -23,3 +23,7 @@ Add the PWABuilder Studio extension from VSCode. You will need it to verify your
 * We need to implement a caching strategy
 * We need to include saddlebag
 * We need to research indexxedDB over Cache Storage
+* Internationalization
+* Supabase needs investigation
+    * To be added to the project
+    * for Auth.
