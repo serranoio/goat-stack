@@ -27,3 +27,6 @@ Add the PWABuilder Studio extension from VSCode. You will need it to verify your
 * Supabase needs investigation
     * To be added to the project
     * for Auth.
+
+
+* For the end: See if you can publish it so it can be packaged 

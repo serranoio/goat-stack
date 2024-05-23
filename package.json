@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@shoelace-style/shoelace": "^2.15.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
@@ -29,13 +30,16 @@
     "posthog-js": "^1.131.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.23.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "urlpattern-polyfill": "^10.0.0",
     "workbox-build": "^7.0.0",
     "workbox-core": "^7.0.0",
-    "workbox-precaching": "^7.0.0"
+    "workbox-precaching": "^7.0.0",
+    "workbox-routing": "^7.1.0",
+    "workbox-strategies": "^7.1.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",

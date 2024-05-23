@@ -1,9 +1,44 @@
-import React from "react"
+import React, { useState } from "react"
 import "./App.css"
-export default function App() {
+import { Button } from "./components/ui/button"
+import { useQuery } from "react-query";
 
+// example of a custom hook
+const useRandomQuote = () => {
+    const fetchCall = async () => {
+        const response = await fetch("https://api.quotable.io/random")
+        const msg = await response.json()
+        return msg
+    } 
+    
+    // we are using react query. This is just a basic call with a refetch function passed through
+    const {data, isLoading, error, refetch} = useQuery(
+        'quote', 
+        fetchCall
+        )
+
+    return {data, isLoading, error, refetch}
+}
+
+
+export default function App() {
+    const {data: quote, isLoading, error, refetch} = useRandomQuote()
+
+    const showQuote = () => {
+        if (error) {
+            return <div>Error in calling the endpoint</div>
+        }
+
+        if (isLoading) {
+            return <div>Is loading...</div>
+        }
+
+        return <p>{quote?.content}</p> 
+    }
 
     return <main>
+        <Button variant={"outline"} onClick={() => refetch()}>Fetch fun quote</Button>
+        {showQuote()}
         <h1 className="h1 text-center">
         App Template h1
         </h1> 
