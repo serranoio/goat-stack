@@ -3,6 +3,7 @@ import "./App.css"
 import { Button } from "./components/ui/button"
 import { useQuery } from "react-query";
 import { useBoundStore, useStore } from "./Routes";
+import Nav from "./components/my/Nav/Nav";
 
 // example of a custom hook
 const useRandomQuote = () => {
@@ -51,7 +52,8 @@ export default function App() {
     }
 
     return <main>
-        <div className="justify-center flex gap-2">
+        <Nav/>
+        <div className="justify-center flex gap-2 py-12 mt-4">
             <Button variant={"outline"} onClick={() => refetch()}>Fetch fun quote</Button>
             <Button variant={"default"} onClick={() => {
                 persistentQuoteState.removeAllQuotes();

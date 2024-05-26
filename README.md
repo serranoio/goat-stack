@@ -26,10 +26,13 @@ Welcome to the goat stack.
 
 `npx shadcn-ui@latest add button`
 
-
 Add the PWABuilder Studio extension from VSCode. You will need it to verify your PWA configuration.
 
+Download CLI for creating react files
+
 ## Needs
+* AI
+* Linting
 * Internationalization
 * Supabase needs investigation
     * To be added to the project
