@@ -39,6 +39,6 @@ Download CLI for creating react files
     * for Auth.
 
 ## TO-DO
-* Finish react-testing-library course
 
+* Finish react-testing-library course
 * For the end: See if you can deploy it to netlify so it can be packaged 

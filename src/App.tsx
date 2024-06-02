@@ -4,7 +4,7 @@ import { Button } from "./components/ui/button"
 import { useQuery } from "react-query";
 import { useBoundStore, useStore } from "./Routes";
 import Nav from "./components/my/Nav/Nav";
-
+import { useTranslation } from "react-i18next";
 // example of a custom hook
 const useRandomQuote = () => {
     const fetchCall = async () => {
@@ -30,8 +30,12 @@ export default function App() {
     const persistentQuoteState = useBoundStore((state: any) => state) 
 
 
+    const { t, i18n } = useTranslation();
+
     console.log(persistentQuoteState)
     useEffect(() => {
+        i18n.changeLanguage(persistentQuoteState.lang)
+
         if (quote) {
             quoteState.addQuote(quote.content)
             persistentQuoteState.addQuote(quote.content)
@@ -53,6 +57,16 @@ export default function App() {
 
     return <main>
         <Nav/>
+        <div>
+            <h2 className="h2">{t("section")}</h2>
+            <p>{t("translation")}</p>
+            <Button variant={"default"} onClick={() => {
+                const newLang = i18n.language === "en" ? "es" : "en"
+
+                i18n.changeLanguage(newLang)
+                persistentQuoteState.setLang(newLang)
+            }}>Change Language</Button>
+        </div>
         <div className="justify-center flex gap-2 py-12 mt-4">
             <Button variant={"outline"} onClick={() => refetch()}>Fetch fun quote</Button>
             <Button variant={"default"} onClick={() => {
@@ -62,7 +76,7 @@ export default function App() {
             }}>Remove all quotes</Button>
         </div>
         <div>
-            <h2 className="h2">Current Quote:</h2>
+            <h2 className="h2">{t("current")}</h2>
         {showQuote()}
         </div>
 
