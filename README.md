@@ -17,7 +17,9 @@ Welcome to the goat stack.
     - [PWABuilder](https://www.pwabuilder.com/)
     - [Workbox](https://developer.chrome.com/docs/workbox/modules/workbox-sw)
         - Using their libraries, we can abstract away the route registration + the caching strategy
-
+- Internationalization
+    - [i18next](https://react.i18next.com/latest/i18nextprovider)
+    - [i18nextreact](https://react.i18next.com/latest/i18nextprovider)
 
 
 ## Requirements 
@@ -33,12 +35,9 @@ Download CLI for creating react files
 ## Needs
 * AI
 * Linting
-* Internationalization
 * Supabase needs investigation
     * To be added to the project
     * for Auth.
 
 ## TO-DO
-
-* Finish react-testing-library course
 * For the end: See if you can deploy it to netlify so it can be packaged 
