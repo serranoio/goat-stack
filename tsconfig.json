@@ -4,6 +4,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "jsx": "react-jsx", // Use "react" for React < 17
     "module": "esnext",
     "target": "esnext",
     "lib": ["es2017", "esnext", "dom", "dom.iterable"],
