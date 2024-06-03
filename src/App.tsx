@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
 import {
   Quote,
   QuoteStoreState,
@@ -11,6 +10,8 @@ import {
 } from '@/lib/store';
 import { useRandomQuote } from './lib/hooks';
 import Nav from './components/layout/Nav/Nav';
+import { Button } from './components/ui/button';
+
 // example of a custom hook
 export default function App() {
   const { data: quote, isLoading, error, refetch } = useRandomQuote();
