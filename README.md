@@ -28,7 +28,7 @@ Welcome to the goat stack.
 ### Backend
 
 - Dockerized Golang webserver
-  - Fly.io
+- Fly.io
 
 ## Requirements
 

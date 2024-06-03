@@ -1,13 +1,13 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 // LANG
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
