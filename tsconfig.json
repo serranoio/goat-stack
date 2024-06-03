@@ -30,7 +30,8 @@
     "test-setup.config.ts",
     "src/lib/hooks/index.tsx",
     "src/lib/store/index.tsx",
-    "src/lib/lang.tsx"
+    "src/lib/lang.tsx",
+    "src/lib/utils.ts"
   ],
   "exclude": ["node_modules"]
 }
