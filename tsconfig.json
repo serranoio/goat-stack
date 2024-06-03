@@ -24,15 +24,7 @@
     "isolatedModules": true,
     "types": ["vite-plugin-pwa/client", "vite/client"]
   },
-  "include": [
-    "src/**/*.ts",
-    "router.d.ts",
-    "test-setup.config.ts",
-    "src/lib/hooks/index.tsx",
-    "src/lib/store/index.tsx",
-    "src/lib/lang.tsx",
-    "src/lib/utils.ts"
-  ],
+  "include": ["test-setup.config.ts", "src/*"],
   "exclude": ["node_modules"]
 }
 
