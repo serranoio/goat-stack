@@ -1,45 +1,44 @@
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
-import react from "@vitejs/plugin-react"
+import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
+  base: '/',
   build: {
     sourcemap: true,
-    assetsDir: "code",
-    target: ["esnext"],
+    assetsDir: 'code',
+    target: ['esnext'],
     cssMinify: true,
-    lib: false
+    lib: false,
   },
   plugins: [
     react(),
     VitePWA({
-      strategies: "injectManifest",
+      strategies: 'injectManifest',
       injectManifest: {
         swSrc: 'public/sw.js',
         swDest: 'dist/sw.js',
         globDirectory: 'dist',
-        globPatterns: [
-          '**/*.{html,js,css,json,png}',
-        ],
+        globPatterns: ['**/*.{html,js,css,json,png}'],
       },
       injectRegister: false,
       manifest: false,
       devOptions: {
-        enabled: true
-      }
-    })
+        enabled: true,
+      },
+    }),
   ],
   test: {
     environment: 'jsdom',
     globals: true,
-    setupFiles: 'test-setup.config.ts'
-},
+    setupFiles: 'test-setup.config.ts',
+  },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-})
+});
+

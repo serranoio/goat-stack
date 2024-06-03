@@ -1,13 +1,15 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
-import i18n from "i18next"
-import { initReactI18next } from "react-i18next"
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
-i18n  
+// LANG
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     // the translations
@@ -16,23 +18,24 @@ i18n
     resources: {
       en: {
         translation: {
-          "translation": "English version of this sentence.",
-          "current": "Current Quote",
-          "section": "Translation Section"
-        }
+          translation: 'English version of this sentence.',
+          current: 'Current Quote',
+          section: 'Translation Section',
+        },
       },
       es: {
         translation: {
-          "translation": "version espanola de esta frase.",
-          "current": "Cita Actual",
-          "section": "Sección de Traducción"
-        }
-      }
+          translation: 'version espanola de esta frase.',
+          current: 'Cita Actual',
+          section: 'Sección de Traducción',
+        },
+      },
     },
-    lng: "en", // if you're using a language detector, do not define the lng option
-    fallbackLng: "en",
+    lng: 'en', // if you're using a language detector, do not define the lng option
+    fallbackLng: 'en',
 
     interpolation: {
-      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
-    }
+      escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    },
   });
+

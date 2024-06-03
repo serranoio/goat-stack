@@ -1,9 +1,9 @@
 importScripts(
-    'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
+  'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
 );
 
 importScripts(
-    'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
+  'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
 );
 
 // // This is your Service Worker, you can put any of your custom Service Worker
@@ -63,29 +63,26 @@ importScripts(
 
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST || []);
 
+const randomCache = 'random';
 
-
-const randomCache = "random"
-
-const matchCb = ({url, request, event}) => {
-    console.log(url.origin)
-    
-    return url.origin === "https://api.quotable.io"
-}
+const matchCb = ({ url, request, event }) => {
+  return url.origin === 'https://api.quotable.io';
+};
 workbox.routing.registerRoute(
-    matchCb,
-    new workbox.strategies.StaleWhileRevalidate({
-        randomCache,
-    })
-)
+  matchCb,
+  new workbox.strategies.StaleWhileRevalidate({
+    randomCache,
+  })
+);
 
 // Establish a cache name
 // const cacheName = 'query';
 
 // self.addEventListener('install', (event) => {
-    // event.waitUntil(caches.open(cacheName))
+// event.waitUntil(caches.open(cacheName))
 // })
 
 // self.addEventListener('fetch', (event) => {
 //     console.log(event)
 //   });
+
