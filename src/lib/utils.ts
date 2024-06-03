@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import i18n from 'i18next';
+import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 export function cn(...inputs: ClassValue[]) {
@@ -8,8 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // LANG
-
-i18n
+i18next
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     // the translations
