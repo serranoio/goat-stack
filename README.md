@@ -54,3 +54,6 @@ Download CLI for creating react files
 
 For every store created, there is a slight delay for hydration. You have to implement a hydration check for that.
 
+### Also,
+
+Main branch features examples, new branch is the branch that you want to clone
